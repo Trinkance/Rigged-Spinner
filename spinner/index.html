@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Spinner</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Simple HTML Spinner - Created with canvas element and JavaScript</h1>
+        </div>
+
+        <div class="left">
+            <canvas class="canvas" id="canvas" height="500" width="500"></canvas>
+            <h1 class="pointer">^</h1>
+        </div>
+
+        <div class="data-list" id="data-list">
+            <!--
+            <div class="data">
+                <input type="text" class="data-weight">
+                <input type="text" class="data-name">
+            </div>
+            -->
+            <button class="data-add" id="data-add">+</button>
+        </div>
+    </body>
+
+    <style>
+        body {
+            background-color: rgb(26, 26, 26);
+            font-family: Verdana;
+        }
+
+        .left {
+            position: absolute;
+            height: 100%;
+            width: 50%;
+            top: 0px;
+            left: 0px;
+            background-color: transparent;
+        }
+
+        .header {
+            background-color: rgb(30, 30, 30);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .header h1 {
+            color: white;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+
+        .canvas {
+            position: absolute;
+            top: 10%;
+            left: calc(60% - 200px);
+            top: calc(50% - 200px);
+        }
+
+        .data-list {
+            background-color: rgb(30, 30, 30);
+            height: calc(100% - 52px);
+            padding-top: 6px;
+            width: 40%;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .data-list .data {
+            width: 100%;
+            height: 24px;
+            background-color: rgb(30, 30, 30);
+            border-bottom: 1px solid rgb(50, 50, 50);
+        }
+
+        .data-hover {
+            background-color: rgb(35, 35, 35) !important;
+        }
+
+        .data-list .data input {
+            position: absolute;
+            background: transparent;
+            border-style: none;
+            color: white;
+            height: 22px;
+        }
+
+        .data-list .data .data-weight {
+            border-right: 1px solid rgb(50, 50, 50);
+            width: 19%;
+            left: 1%;
+        }
+
+        .data-list .data .data-name {
+            border-right: 1px solid rgb(50, 50, 50);
+            width: 70%;
+            left: 22%;
+        }
+
+        .data-list .data .data-delete {
+            user-select: none;
+            color: white;
+            font-size: 24px;
+            margin: 0;
+            margin-left: 94.5%;
+            margin-top: -0.5%;
+        }
+
+        .data-add {
+            user-select: none;
+            position: absolute;
+            color: white;
+            font-weight: bold;
+            border: none;
+            text-decoration: none;
+            background: transparent;
+            width: 100%;
+            bottom: 16px;
+            font-size: 24px;
+            order: 9999;
+        }
+
+        .pointer {
+            user-select: none;
+            position: absolute;
+            left: calc(50% + 120px);
+            top: calc(50% + 225px);
+            color: white;
+            font-size: 64px;
+        }
+    </style>
+
+    <script src="main.js"></script>
+</html>
